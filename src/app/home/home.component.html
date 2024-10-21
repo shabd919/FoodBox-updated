@@ -1,0 +1,49 @@
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <div class="body">
+  <div class="container mt-5">
+    <div class="add-food-container">
+      <h2 class="text-center">Add Food Details</h2>
+      <form (ngSubmit)="onSubmit(foodForm)" #foodForm="ngForm">
+        <div class="form-group">
+          <label for="foodName">Food Name:</label>
+          <input type="text" class="form-control" id="foodName" required [(ngModel)]="foodModel.name" name="foodName" />
+        </div>
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea class="form-control" id="description" required [(ngModel)]="foodModel.description" name="description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input type="number" class="form-control" id="price" required [(ngModel)]="foodModel.price" name="price" min="0" />
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity:</label>
+          <input type="number" class="form-control" id="quantity" required [(ngModel)]="foodModel.quantity" name="quantity" />
+        </div>
+        <div class="form-group">
+          <label for="category">Category:</label>
+          <select class="form-control" id="category" required [(ngModel)]="foodModel.category" name="category">
+            <option value="" disabled selected>Select a category</option>
+            <option value="appetizer">Appetizer</option>
+            <option value="main">Main Course</option>
+            <option value="dessert">Dessert</option>
+            <option value="beverage">Beverage</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="imageUrl">Image URL:</label>
+          <input type="url" class="form-control" id="imageUrl" required [(ngModel)]="foodModel.imageUrl" name="imageUrl" />
+        </div>
+        <button type="submit" [disabled]="!foodForm.form.valid">Add Food</button>
+        <p *ngIf="errorMessage" class="text-danger">{{ errorMessage }}</p>
+      </form>
+    </div>
+  </div>
+  </div>
+  
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  

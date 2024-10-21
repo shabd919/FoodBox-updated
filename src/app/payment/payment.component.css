@@ -1,0 +1,67 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #302f2f;
+}
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgb(236, 233, 233);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.card-icons {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: #888;
+    align-items: center;
+}
+
+
+.form-group {
+    position: relative;
+}
+.form-control {
+    padding-right: 40px; 
+}
+.card-icons i {
+    margin-left: 5px;
+}
+
+.fa-cc-visa {
+    color: #1A1F71; 
+}
+.fa-cc-mastercard {
+    background: linear-gradient(90deg, #FF5F00 0%, #C51F1F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent; 
+}
+.fa-cc-amex {
+    color: #2D7E8E; 
+}
+.fa-cc-discover {
+    color: #FF8C00; 
+}
+
+.btn {
+    background-color: #007bff;
+}
+

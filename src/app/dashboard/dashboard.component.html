@@ -1,0 +1,33 @@
+<div class="body">
+<h1>Product List</h1>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+                <th>Photo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of dummy">
+                <td>{{ product.name }}</td>
+                <td>&#8377;{{ product.price.toFixed(2) }}</td>
+                <td>
+                    <div class="quantity-controls">
+                        <button class="btn" (click)="decrement(product)">-</button>
+                        <span>{{ product.quantity }}</span>
+                        <button class="btn" (click)="increment(product)">+</button>
+                    </div>
+                </td>
+                <td>&#8377;{{ (product.price * product.quantity).toFixed(2) }}</td>
+                <td><img src="../../assets/abi.png" alt="" srcset=""></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</div>
+
